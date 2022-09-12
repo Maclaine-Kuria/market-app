@@ -1,0 +1,31 @@
+<form action="/signup" method="POST">
+  <div class="container">
+      <h3 class="display-1">Register</h3>
+      <p>
+        <h3>
+          <small class="text-muted">Please fill in this form to create an account.</small></h3></p>
+      <hr>
+      <br>
+    <label for="username">Username:</label>
+    <input type="text" name="username">
+    <br>
+    <br>
+
+    <label for="password">Password:  </label>
+    <input type="password" name="password">
+    <% if flash[:message] %>
+    <h3>
+    <small class="text-muted"><%=flash[:message]%></small></h3></p>
+    <%end%>
+    <hr>
+    <br>
+    <input type="submit" value="Sign Up" >
+  </div>
+   <br>
+    <div class="container signin">
+      <p>
+        <h4>
+          <small class="text-muted">Already have an account? <a href="/login">Log-in</a>.<small><h4></p>
+  </div>
+  
+</form>
