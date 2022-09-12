@@ -1,0 +1,42 @@
+<br>
+<br>
+
+<h1 align="center">Order <%=@order.id%></h1>
+<br>
+<hr>
+<br>
+  
+<table style="width:90%"  align="center" class="table table-bordered">
+  <thead>   
+  <tr>
+          <th scope="col">Number</th>
+          <th scope="col"> Customer Name</th>
+          <th scope="col">Item</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Pick Up Date</th>
+    </tr>
+  </thead>
+       <tbody>
+        <tr>
+          <th scope="row"><%=@order.id%>
+            <h5><a href="/orders/<%=@order.id%>/edit">edit</a></h5>
+          </th>
+            <td><%=@order.customer_name%></td>
+            <td><%=@order.item%></td>
+            <td><%=@order.amount%></td>
+            <td><%=@order.pick_up_date%></td>
+        </tr>
+      </tbody>
+      </table>
+      <br>
+      <form align="center" method="POST" action="/delete/<%=@order.id%>">
+        <input id="hidden" type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete" class="btn btn-succes" />
+      </form>
+      <br>
+      <hr>
+      <br>
+      <div align="center">
+        <button type="button" class="btn btn-dark"><h3><a href="/orders">All Orders</a></button>
+        <button type="button" class="btn btn-dark"><h3><a href="/logout">Logout</a></h3></button>
+      </div>
